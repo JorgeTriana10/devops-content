@@ -3,7 +3,7 @@
 Repositorio personal con el contenido que estoy trabajando durante un curso completo de DevOps.  
 Aquí organizo por módulos toda la práctica que voy haciendo: comandos, scripts, configuraciones y archivos de automatización.
 
-El objetivo es tener un repositorio limpio y estructurado que pueda servir como referencia, documentación y ejemplo práctico para entrevistas o futuros proyectos.
+El objetivo es tener un repositorio estructurado que pueda servir como referencia, documentación y ejemplos prácticos.
 
 ---
 
