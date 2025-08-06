@@ -20,7 +20,8 @@ El objetivo es tener un repositorio estructurado que pueda servir como referenci
     │   └── services.md            → Gestión de servicios con systemctl
     └── vagrant/
         ├── Vagrantfile            → Máquina virtual Ubuntu configurada con provisioning
-        └── notas.md               → Apuntes sobre Vagrant y carpetas sincronizadas
+        ├── provision.sh           → Script de provisión
+        └── commands-vagrant.md    → Comandos sobre Vagrant 
 
 ---
 
