@@ -36,7 +36,7 @@ El objetivo es tener un repositorio estructurado que pueda servir como referenci
 
 ## Sobre el curso
 
-Este contenido está basado en el curso “Begin Your DevOps Career As a Newbie” (Imran Teli, Udemy), e irá creciendo a medida que avance por los módulos de Bash scripting, Git, CI/CD, Ansible, Docker, Kubernetes, Terraform y despliegue de proyectos reales.
+Este contenido está basado en el curso “DevOps Beginners to Advanced with Projects” (Imran Teli, Udemy), e irá creciendo a medida que avance por los módulos de Bash scripting, Git, CI/CD, Ansible, Docker, Kubernetes, Terraform y despliegue de proyectos reales.
 
 ---
 
