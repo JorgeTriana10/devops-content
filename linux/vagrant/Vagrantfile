@@ -1,0 +1,28 @@
+# Configuración de la VM con box Ubuntu, red privada y recursos asignados
+Vagrant.configure("2") do |config|
+
+  # Box base (se descargará si no está instalada)
+  config.vm.box = "ubuntu/jammy64"
+
+  # Nombre de la VM dentro de VirtualBox
+  config.vm.hostname = "devops-vm"
+
+  # IP fija para red privada
+  config.vm.network "private_network", ip: "192.168.56.10"
+
+  # Carpeta sincronizada (host → guest)
+  config.vm.synced_folder ".", "/vagrant"
+
+  # Configuración de recursos
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "DevOpsVM"
+    vb.memory = "2048"
+    vb.cpus = 2
+  end
+
+  # Este bloque ejecutará un script externo llamado provision.sh
+  # al iniciar la máquina (vagrant up) o al reprovisionar (vagrant provision).
+  # El script puede instalar software, configurar servicios, etc.
+  config.vm.provision "shell", path: "provision.sh"
+
+end
