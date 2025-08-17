@@ -61,11 +61,22 @@ while (( i <= 5 )); do
 done
 ```
 
-Ejemplo leyendo de un fichero:
+Otro Ejemplo :
 ```bash
-while IFS= read -r linea; do
-  echo "-> $linea"
-done < archivo.txt
+#!/bin/bash
+
+counter=0
+
+while [ $counter -lt 5 ]
+do
+  echo "Looping..."
+  echo "Value of counting is $counter"
+  counter=$(($counter + 1))
+  sleep 1
+done
+
+echo "Out of the loop"
+
 ```
 
 ---
