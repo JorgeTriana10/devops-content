@@ -18,7 +18,7 @@ chmod +x ./script.sh
 **Errores típicos:**
 - Ejecutar sin permisos (`Permission denied`).
 - Guardar con saltos de línea Windows (CRLF).  
-  👉 Solución: `dos2unix` o configurar VSCode a LF.
+   Solución: `dos2unix` o configurar VSCode a LF.
 
 ---
 
