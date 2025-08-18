@@ -7,11 +7,13 @@ El objetivo es automatizar la instalación y despliegue de un servidor web senci
 
 ## Estructura del proyecto
 
+```text
 remote-cmd-exec/
 ├── multios_websetup.sh
 ├── remhosts
 ├── webdeploy.sh
 └── README.md
+```
 
 
 ### 1. `multios_websetup.sh`
@@ -42,10 +44,11 @@ Cada línea corresponde a un nombre de host configurado en el `/etc/hosts` o res
 
 Ejemplo de contenido:
 
+```text
 web01
 web02
 web03
-
+```
 
 ---
 
