@@ -11,6 +11,8 @@ El objetivo es tener un repositorio estructurado que pueda servir como referenci
 
 ### Linux
 
+    
+
     linux/
     ├── commands.md                → Comandos esenciales de Linux
     ├── networking-commands.md     → Comandos de red: ifconfig, netstat, etc.
@@ -21,7 +23,22 @@ El objetivo es tener un repositorio estructurado que pueda servir como referenci
     └── vagrant/
         ├── Vagrantfile            → Máquina virtual Ubuntu configurada con provisioning
         ├── provision.sh           → Script de provisión
-        └── commands-vagrant.md    → Comandos sobre Vagrant 
+        └── commands-vagrant.md    → Comandos sobre Vagrant
+    
+    bash/
+    ├── Bash Content/
+    │   ├── bash_basics.md         → Fundamentos básicos de Bash
+    │   ├── cli_args.md            → Argumentos por línea de comandos
+    │   ├── conditionals.md        → Estructuras condicionales
+    │   ├── io_redirection.md      → Redirección de entrada/salida
+    │   ├── loops.md               → Bucles en Bash
+    │   └── variables.md           → Manejo de variables
+    ├── Project/                   → Scripts y proyectos prácticos en Bash
+    ├── README.md                  → Explicación de la sección Bash
+    ├── multios_websetup.sh        → Script multi-OS para despliegue web
+    ├── remhosts                   → Gestión de hosts remotos
+    └── webdeploy.sh               → Script de despliegue web
+
 
 ---
 
