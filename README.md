@@ -33,11 +33,11 @@ El objetivo es tener un repositorio estructurado que pueda servir como referenci
     │   ├── io_redirection.md      → Redirección de entrada/salida
     │   ├── loops.md               → Bucles en Bash
     │   └── variables.md           → Manejo de variables
-    ├── Project/                   → Scripts y proyectos prácticos en Bash
-    ├── README.md                  → Explicación de la sección Bash
-    ├── multios_websetup.sh        → Script multi-OS para despliegue web
-    ├── remhosts                   → Gestión de hosts remotos
-    └── webdeploy.sh               → Script de despliegue web
+    └── Project/                   → Scripts y proyectos prácticos en Bash
+        ├── README.md                  → Explicación de la sección Bash
+        ├── multios_websetup.sh        → Script multi-OS para despliegue web
+        ├── remhosts                   → Gestión de hosts remotos
+        └── webdeploy.sh               → Script de despliegue web
 
 
 ---
