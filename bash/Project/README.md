@@ -20,19 +20,86 @@ remote-cmd-exec/
 Este script instala y configura un servidor web dependiendo del sistema operativo de la VM destino.
 
 - **Detección del sistema operativo**:  
-  El script comprueba si `yum` está disponible para determinar si el sistema es CentOS/Red Hat.  
-  Si no lo está, asume que se trata de Ubuntu/Debian.
+  El script hace yum --help &> /dev/null y mira $? (el código de salida):
+	- 0 → existe yum → asume CentOS/RHEL.
+	- distinto de 0 → asume Ubuntu/Debian.
 
-- **En CentOS**:
-  - Instala `httpd`, `wget` y `unzip`.
-  - Descarga una plantilla web desde [tooplate.com](https://www.tooplate.com/).
-  - Despliega los archivos en `/var/www/html/`.
-  - Inicia y habilita el servicio `httpd`.
+### Ejecución en CentOS
 
-- **En Ubuntu**:
-  - Instala `apache2`, `wget` y `unzip`.
-  - Descarga y despliega la misma plantilla.
-  - Inicia y habilita el servicio `apache2`.
+En sistemas **CentOS/RHEL** el script realiza las siguientes acciones:
+
+1. **Instala paquetes necesarios**  
+   ```bash
+   sudo yum install httpd wget unzip -y
+   ```
+   Esto instala el servidor web `httpd`, el descargador `wget` y la utilidad `unzip`.
+
+2. **Arranca y habilita el servicio**  
+   ```bash
+   sudo systemctl start httpd
+   sudo systemctl enable httpd
+   ```
+
+3. **Crea un directorio temporal y despliega la web**  
+   ```bash
+   mkdir -p /tmp/webfiles
+   cd /tmp/webfiles
+   wget https://www.tooplate.com/zip-templates/2098_health.zip
+   unzip 2098_health.zip
+   sudo cp -r 2098_health/* /var/www/html/
+   ```
+
+4. **Reinicia el servicio para aplicar cambios**  
+   ```bash
+   sudo systemctl restart httpd
+   ```
+
+5. **Limpieza y verificación**  
+   ```bash
+   rm -rf /tmp/webfiles
+   sudo systemctl status httpd
+   ls /var/www/html
+   ```
+
+### Ejecución en Ubuntu/Debian
+
+En sistemas **Ubuntu/Debian** el script realiza las siguientes acciones:
+
+1. **Actualiza repositorios e instala paquetes necesarios**  
+   ```bash
+   sudo apt update
+   sudo apt install apache2 wget unzip -y
+   ```
+   Esto instala el servidor web `apache2`, el descargador `wget` y la utilidad `unzip`.
+
+2. **Arranca y habilita el servicio**  
+   ```bash
+   sudo systemctl start apache2
+   sudo systemctl enable apache2
+   ```
+
+3. **Crea un directorio temporal y despliega la web**  
+   ```bash
+   mkdir -p /tmp/webfiles
+   cd /tmp/webfiles
+   wget https://www.tooplate.com/zip-templates/2098_health.zip
+   unzip 2098_health.zip
+   sudo cp -r 2098_health/* /var/www/html/
+   ```
+
+4. **Reinicia el servicio para aplicar cambios**  
+   ```bash
+   sudo systemctl restart apache2
+   ```
+
+5. **Limpieza y verificación**  
+   ```bash
+   rm -rf /tmp/webfiles
+   sudo systemctl status apache2
+   ls /var/www/html
+   ```
+
+
 
 De este modo, el script es portable entre distintas distribuciones Linux.
 
