@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+# Configuración
+LOG_LEVEL="${LOG_LEVEL:-INFO}"     # DEBUG < INFO < WARN < ERROR
+LOG_FILE="${LOG_FILE:-./script.log}"
+
+# Mapa de severidad a número
+_level_num() {
+  case "$1" in
+    DEBUG) echo 10 ;;
+    INFO)  echo 20 ;;
+    WARN)  echo 30 ;;
+    ERROR) echo 40 ;;
+    *)     echo 20 ;;
+  esac
+}
+
+# Colores (solo si stdout es terminal)
+_is_tty() { [ -t 1 ]; }
+color() {
+  _is_tty || { echo ""; return; }
+  case "$1" in
+    DEBUG) echo "\033[2m" ;;           # tenue
+    INFO)  echo "\033[0m" ;;           # normal
+    WARN)  echo "\033[33m" ;;          # amarillo
+    ERROR) echo "\033[31m" ;;          # rojo
+    *)     echo "\033[0m" ;;
+  esac
+}
+NC="\033[0m"
+
+log() {
+  local level="${1:-INFO}"; shift || true
+  local msg="$*"
+  local ts; ts="$(date '+%Y-%m-%d %H:%M:%S')"
+
+  # Filtrado por nivel
+  if [ "$(_level_num "$level")" -lt "$(_level_num "$LOG_LEVEL")" ]; then
+    return 0
+  fi
+
+  local c; c="$(color "$level")"
+  # A consola
+  printf '%b%s [%s] %s%b\n' "$c" "$ts" "$level" "$msg" "$NC"
+  # A archivo (sin códigos de color)
+  printf '%s [%s] %s\n' "$ts" "$level" "$msg" >>"$LOG_FILE"
+}
+
+# Rotación simple (si pasa de 1MB)
+rotate_logs() {
+  if [ -f "$LOG_FILE" ] && [ "$(stat -c%s "$LOG_FILE")" -gt $((1024*1024)) ]; then
+    mv "$LOG_FILE" "$LOG_FILE.$(date +%Y%m%d%H%M%S)"
+    : > "$LOG_FILE"
+    log INFO "Rotado el log"
+  fi
+}
+
+# Ejemplo
+rotate_logs
+log INFO  "Inicio (LOG_LEVEL=$LOG_LEVEL, LOG_FILE=$LOG_FILE)"
+log DEBUG "Mensaje debug (solo se ve si LOG_LEVEL=DEBUG)"
+log WARN  "Advertencia de prueba"
+log ERROR "Error de prueba"
+
+#Para usar el filtrado
+#############################
+#LOG_LEVEL=DEBUG ./script.sh#
+# o para silenciar DEBUG:   #
+#LOG_LEVEL=WARN ./script.sh #
+#############################
