@@ -38,7 +38,6 @@ flowchart LR
 - Flujo de usuario y rutas de datos entendidos.
 - Plan de despliegue incremental (primero “verde”, luego optimizo).
 
-> [!NOTE]
-> La documentación la redacto en primera persona y con foco en lo que realmente hice/decidí en cada paso, para reutilizarlo en el repositorio.
+
 
 
