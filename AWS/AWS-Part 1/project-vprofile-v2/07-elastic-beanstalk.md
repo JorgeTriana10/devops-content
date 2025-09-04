@@ -47,7 +47,7 @@ sequenceDiagram
 - **Target Group** del ALB: estado de health por instancia.
 
 ## Checklist de cierre
-- [x] Entorno EB en **green/healthy**.  
-- [x] ALB con targets en **healthy**.  
-- [x] SG de EB **autorizado** en `vprofile-backend-sg`.  
-- [x] Política de despliegue configurada (p. ej., **Rolling**).
+- Entorno EB en **green/healthy**.  
+- ALB con targets en **healthy**.  
+- SG de EB **autorizado** en `vprofile-backend-sg`.  
+- Política de despliegue configurada (p. ej., **Rolling**).
