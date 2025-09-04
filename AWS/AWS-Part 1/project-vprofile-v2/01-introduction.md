@@ -1,7 +1,7 @@
 <!-- 01-introduccion.md -->
 # 01 — Introducción al proyecto (Re-architecting en AWS)
 
-> [!CONTEXT]
+> **Resumen** 
 > En este proyecto migro la app **vProfile** desde una pila autogestionada a **servicios gestionados en AWS**. Quiero reducir “toil”, simplificar operaciones, mejorar escalabilidad y preparar el terreno para CI/CD.
 
 
@@ -15,7 +15,7 @@
 - **Seguridad**: **Security Groups dedicados**; backend privado en VPC; acceso de EB controlado por SG.
 
 ## Diagrama (alto nivel)
-~~~mermaid
+
 flowchart LR
   U[Usuarios] -->|DNS| R53[Route 53]
   R53 --> CF[CloudFront (CDN)]
@@ -24,7 +24,7 @@ flowchart LR
   EB --> RDS[(RDS MySQL)]
   EB --> MQ[(Amazon MQ - RabbitMQ)]
   EB --> MC[(ElastiCache - Memcached)]
-~~~
+
 
 ## Decisiones clave (mi criterio)
 - **Servicios gestionados primero**: DB, caché y mensajería no las administro en EC2.

@@ -1,7 +1,7 @@
 <!-- 02-security-groups-y-keypairs.md -->
 # 02 — Security Groups y Key Pairs
 
-> [!SUMMARY]
+> **Resumen** 
 > Preparé la **base de red**: un **Security Group de backend** y el **Key Pair** para acceso de diagnóstico a instancias. El objetivo es permitir tráfico **este-oeste** entre servicios del backend y, más tarde, **autorizar EB** como único consumidor.
 
 ## SG de backend (política)
