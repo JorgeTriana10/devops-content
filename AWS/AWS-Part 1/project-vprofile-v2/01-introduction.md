@@ -1,7 +1,7 @@
 <!-- 01-introduccion.md -->
 # 01 — Introducción al proyecto (Re-architecting en AWS)
 
-> **Resumen** 
+>  [!NOTE]
 > En este proyecto migro la app **vProfile** desde una pila autogestionada a **servicios gestionados en AWS**. Quiero reducir “toil”, simplificar operaciones, mejorar escalabilidad y preparar el terreno para CI/CD.
 
 
@@ -33,10 +33,10 @@ flowchart LR
 - **Automatización gradual**: primero manual “conscientemente”, luego lo paso a IaC/CI-CD.
 
 ## Checklist de cierre de sesión
-- [x] Alcance definido (frontend, backend, borde).
-- [x] Patrón de red y seguridad acordado.
-- [x] Flujo de usuario y rutas de datos entendidos.
-- [x] Plan de despliegue incremental (primero “verde”, luego optimizo).
+- Alcance definido (frontend, backend, borde).
+- Patrón de red y seguridad acordado.
+- Flujo de usuario y rutas de datos entendidos.
+- Plan de despliegue incremental (primero “verde”, luego optimizo).
 
 > [!NOTE]
 > La documentación la redacto en primera persona y con foco en lo que realmente hice/decidí en cada paso, para reutilizarlo en el repositorio.

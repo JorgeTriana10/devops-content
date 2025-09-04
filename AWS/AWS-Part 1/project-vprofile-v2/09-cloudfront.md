@@ -1,7 +1,7 @@
 <!-- 09-cloudfront.md -->
 # 09 — CloudFront (CDN delante del ALB)
 
-> **Resumen**  
+> [!NOTE]
 > Añadí **CloudFront** delante del **ALB** de Beanstalk para mejorar la **latencia global** y centralizar **TLS** en el edge. Reconfiguré el **CNAME** del dominio para que apunte a la distribución.
 
 ## Pasos que seguí

@@ -1,7 +1,7 @@
 <!-- 08-build-and-deploy-artifact.md -->
 # 08 — Build & Deploy del artefacto
 
-> **Resumen**  
+> [!NOTE] 
 > Compilé el **`.war`** con Maven y lo subí a **Elastic Beanstalk**. Antes actualicé **`application.properties`** con los endpoints y puertos correctos de **RDS**, **ElastiCache** y **Amazon MQ** (TLS).
 
 ## Configuración de `application.properties`

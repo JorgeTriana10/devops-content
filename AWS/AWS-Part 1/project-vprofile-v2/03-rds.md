@@ -1,7 +1,7 @@
 <!-- 03-rds.md -->
 # 03 — RDS (MySQL)
 
-> **Resumen** 
+> [!NOTE]
 > Aprovisioné **RDS MySQL** como base de datos **privada** dentro de la VPC. No expongo público, y la conexión la hará únicamente **Elastic Beanstalk** vía SG.
 
 ## Parámetros principales

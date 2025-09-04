@@ -1,7 +1,7 @@
 <!-- 07-elastic-beanstalk.md -->
 # 07 — Elastic Beanstalk (Tomcat + ALB + Auto Scaling)
 
-> **Resumen**  
+> [!NOTE]  
 > Desplegué la capa **web** con **Elastic Beanstalk (EB)** utilizando la plataforma **Tomcat**. EB me orquesta **ALB**, **Auto Scaling**, perfiles **IAM**, almacenamiento y ciclo de vida de despliegue. Después, conecté EB con los servicios del backend mediante **Security Groups**.
 
 ## Configuración del entorno EB

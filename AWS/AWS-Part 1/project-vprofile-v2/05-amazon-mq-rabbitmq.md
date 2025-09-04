@@ -1,7 +1,7 @@
 <!-- 05-amazon-mq-rabbitmq.md -->
 # 05 — Amazon MQ (RabbitMQ)
 
-> **Resumen** 
+> [!NOTE]
 > Externalicé la mensajería a **Amazon MQ (RabbitMQ)** en despliegue **privado**. Evito administrar nodos y obtengo monitoreo integrado.
 
 ## Configuración

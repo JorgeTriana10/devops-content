@@ -1,7 +1,7 @@
 <!-- 06-inicializacion-bd-rds.md -->
 # 06 — Inicialización de la base de datos (RDS)
 
-> **Resumen**  
+> [!NOTE]
 > Como mi instancia de **RDS MySQL** es **privada** (sin acceso público), levanté una **EC2 temporal** en la misma VPC para conectarme como cliente MySQL, cargar el **dump SQL** y validar conectividad end-to-end. Después, eliminé esa EC2 para no dejar costes residuales.
 
 ## Flujo de trabajo (paso a paso)
@@ -34,13 +34,13 @@
 7. Quito la **regla temporal** del SG si ya no la necesito y **termino** la EC2 utilitaria.
 
 ## Diagrama (flujo de inicialización)
-~~~mermaid
+
 flowchart LR
   Dev[ (SSH)] --> EC2[EC2 utilitaria]
   EC2 -->|3306| RDS[(RDS MySQL privada)]
   RDS -->|OK| EC2
   EC2 -.cleanup.-> X[(Eliminar EC2)]
-~~~
+
 
 ## Buenas prácticas que apliqué
 - **No** paso la contraseña tras `-p` (evito `-pPASSWORD` para que no quede en el historial).

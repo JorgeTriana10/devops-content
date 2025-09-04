@@ -1,7 +1,7 @@
 <!-- 04-elasticache-memcached.md -->
 # 04 — ElastiCache (Memcached)
 
-> **Resumen** 
+> [!NOTE]
 > Migré la capa de caché a **ElastiCache (Memcached)** para quitar mantenimiento de servidores y obtener métricas y escalado controlado.
 
 ## Configuración
