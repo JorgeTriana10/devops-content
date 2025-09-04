@@ -19,7 +19,7 @@
      - (Regla extra) **self** → permitir tráfico interno entre backends
    - Outbound: por defecto
 
-> Este diseño de SG lo tenía ya conceptualizado en mis notas y me funcionó bien: ALB → APP → BACKENDS, y permisos de SG a SG. :contentReference[oaicite:5]{index=5}
+> Este diseño de SG lo tenía ya conceptualizado en mis notas y me funcionó bien: ALB → APP → BACKENDS, y permisos de SG a SG.
 
 ## Key Pairs
 - Una key por entorno. Nomenclatura: `<project>-<env>-<region>`.

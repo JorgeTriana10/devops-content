@@ -1,5 +1,6 @@
 # Introduction — Lift & Shift a AWS (VProfile)
 
+>[!NOTE]
 Este repo recoge cómo migré mi stack VProfile (multi-tier) a AWS con un enfoque **Lift & Shift**: levantar lo que ya tenía y trasladarlo casi tal cual, sin reescrituras grandes. Objetivo: tener elasticidad (Auto Scaling), punto de entrada único (ALB) y aislar capas (app / backends) con seguridad y DNS privado.
 
 ## Arquitectura (resumen)

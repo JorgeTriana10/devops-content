@@ -17,4 +17,4 @@
 
 Valido que las instancias del ASG entran en **healthy** y sirven tráfico vía ALB.
 
-> Mis notas ya incluían AMI → Launch Template → ASG con health checks del LB y stickiness si hay sesiones. :contentReference[oaicite:11]{index=11}
+> Mis notas ya incluían AMI → Launch Template → ASG con health checks del LB y stickiness si hay sesiones. 

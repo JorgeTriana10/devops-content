@@ -18,7 +18,7 @@ Coloco scripts mínimamente seguros (sin secretos) en `../scripts/` y los pego e
 
 
 
-> En mis notas originales ya tenía listados los puertos de cada servicio y el uso de user-data para automatizar. :contentReference[oaicite:6]{index=6}
+> En mis notas originales ya tenía listados los puertos de cada servicio y el uso de user-data para automatizar. 
 
 ## Consejos rápidos
 - Taggear Name = `vprofile-<role>` para verlo claro en consola.

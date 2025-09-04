@@ -13,5 +13,6 @@ rmq01 -> <PRIVATE_IP_RMQ01>
 Valido desde `app01`:
 ```bash
 ping -c 4 db01.<HOSTED_ZONE_NAME>
+```
 
-En mi documentación original ya indicaba crear A-records privados para cada backend y probar resolución desde la app
+> En mi documentación original ya indicaba crear A-records privados para cada backend y probar resolución desde la app
